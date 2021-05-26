@@ -1,0 +1,125 @@
+body {
+    /* background-image: url("images/Skip.jpg");
+    background-size: cover; */
+    background-color: #85baec;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: x-large;
+}
+main {
+  display:flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+.description {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .description .content {
+  width:50%;
+} */
+.content {
+  display:grid;
+  grid-template-areas: 'text img';
+}
+.text{
+  grid-area:text;
+}
+.text p, .text ul {
+  font-size:x-large;
+}
+.img{
+  justify-self: flex-end;
+  grid-area:img;
+  width:90%;
+}
+.peopleContainer {
+    display: grid;
+    grid-template-areas:
+      'peopleHeader peopleHeader peopleHeader peopleHeader'
+      '. students instructors .';
+  }
+  @media only screen and (max-width: 600px) {
+    .peopleContainer {
+      grid-template-areas:
+        'peopleHeader'
+        'students'
+        'instructors';
+    }
+  }
+  .peopleHeader {
+    grid-area: peopleHeader;
+  }
+  .students {
+    grid-area: students;
+  }
+  .instructors {
+    grid-area: instructors;
+  }
+  h1 {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Amita', cursive;
+
+  }
+  h2 {
+    text-align: center;
+  
+  }
+  /* @media only screen and (max-width: 650px) {
+    h1 {
+      color: red;
+    }
+  } */
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  /* Table Styles */
+  table {
+    border-collapse: collapse;
+    
+  }
+  thead,
+  tfoot {
+    background-color: #c1cde6;
+  }
+  td,
+  th {
+    border: 1px solid #dddddd;
+    padding: 4px
+  }
+  tbody th {
+    color: #0a5f1c;
+  }
+  footer {
+    background-color: rgb(61, 139, 100);
+    font-size: large;
+  }
+  footer {
+    display: grid;
+    grid-template-areas:
+      '. contactus franklincounty .';
+  }
+  @media only screen and (max-width: 600px) {
+    footer {
+      grid-template-areas:
+        'contactus'
+        'franklincounty';
+    }
+  }
+  .contactus {
+    grid-area: contactus;
+  }
+  .franklincounty {
+    grid-area: franklincounty;
+  }
+  .photogallerymain {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .photogallerymain img {
+    margin:40px 10px;
+  }
